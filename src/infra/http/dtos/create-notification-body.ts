@@ -4,12 +4,12 @@ export class CreateNotificationBody {
   // @IsNotEmpty({ message: 'recipientId não pode ser vazio' })
   @IsNotEmpty()
   @IsUUID()
-  recipientId: string
+  recipientId: string;
 
   @IsNotEmpty()
   @Length(5, 240)
-  content: string
+  content: string;
 
   @IsNotEmpty()
-  category: string
+  category: string;
 }

@@ -2,7 +2,6 @@
 import { makeNotification } from "@test/factories/notification-factory";
 import InMemoryNotificationsRepository from "@test/repositories/in-memory-notifications-repository";
 import { randomUUID } from "crypto";
-import { CancelNotification } from "./cancel-notification";
 import NotificationNotFound from "./errors/notification-not-found";
 import { UnreadNotification } from "./unread-notification";
 

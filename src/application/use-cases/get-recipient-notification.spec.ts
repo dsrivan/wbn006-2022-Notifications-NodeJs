@@ -1,7 +1,7 @@
 import { makeNotification } from "@test/factories/notification-factory";
 import InMemoryNotificationsRepository from "@test/repositories/in-memory-notifications-repository";
 import { randomUUID } from "crypto";
-import { GetRecipientNotifications } from "./get-recipient-notification";
+import { GetRecipientNotifications } from "./get-recipient-notifications";
 
 describe('Count recipients notifications', () => {
   it('should be able to get recipient notifications', async () => {

@@ -1,4 +1,6 @@
-class NotificationNotFound extends Error {
+import { NotFoundException } from "@nestjs/common";
+
+class NotificationNotFound extends NotFoundException {
   constructor() {
     super('Notification not found.');
   };

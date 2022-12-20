@@ -37,7 +37,7 @@ export class NotificationsController {
   }
 
   @Get('count/from/:recipientId')
-  @ApiOperation({ summary: 'Count notifications by a recipient ID' })
+  @ApiOperation({ summary: 'Count notifications by a recipient Id' })
   @ApiParam({
     name: 'recipientId',
     type: 'string',
@@ -51,7 +51,7 @@ export class NotificationsController {
   }
 
   @Get('from/:recipientId')
-  @ApiOperation({ summary: 'Get notifications by a recipient ID' })
+  @ApiOperation({ summary: 'Get notifications by a recipient Id' })
   @ApiParam({
     name: 'recipientId',
     type: 'string',

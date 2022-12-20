@@ -22,18 +22,18 @@ export class NotificationsController {
     private getRecipientNotifications: GetRecipientNotifications,
   ) { }
 
-  @Patch(':notificationId/cancel')
-  @ApiOperation({ summary: 'Cancel a notification' })
+  @Patch(':id/cancel')
+  @ApiOperation({ summary: 'Cancel a notification by its Id' })
   @ApiParam({
-    name: 'notificationId',
+    name: 'id',
     type: 'string',
     description: 'Cancel a notification by its Id',
     example: 'd67dd352-0361-4f80-afa2-a719b0d4eb58'
   })
   @ApiResponse({ status: 200, description: 'Notification cancelled' })
   @ApiResponse({ status: 404, description: 'Notification not found' })
-  async cancel(@Param('notificationId') notificationId: string) {
-    await this.cancelNotification.execute({ notificationId: notificationId });
+  async cancel(@Param('id') id: string) {
+    await this.cancelNotification.execute({ notificationId: id });
   }
 
   @Get('count/from/:recipientId')
@@ -66,32 +66,32 @@ export class NotificationsController {
     };
   }
 
-  @Patch(':notificationId/read')
+  @Patch(':id/read')
   @ApiOperation({ summary: 'Read a notification by its Id' })
   @ApiParam({
-    name: 'notificationId',
+    name: 'id',
     type: 'string',
     description: 'Read a notification by its Id',
     example: 'd67dd352-0361-4f80-afa2-a719b0d4eb58'
   })
   @ApiResponse({ status: 200, description: 'Notification readed' })
   @ApiResponse({ status: 404, description: 'Notification not found' })
-  async read(@Param('notificationId') notificationId: string) {
-    await this.readNotification.execute({ notificationId: notificationId });
+  async read(@Param('id') id: string) {
+    await this.readNotification.execute({ notificationId: id });
   }
 
-  @Patch(':notificationId/unread')
+  @Patch(':id/unread')
   @ApiOperation({ summary: 'Unread a notification by its Id' })
   @ApiParam({
-    name: 'notificationId',
+    name: 'id',
     type: 'string',
     description: 'Unread a notification by its Id',
     example: 'd67dd352-0361-4f80-afa2-a719b0d4eb58'
   })
   @ApiResponse({ status: 200, description: 'Notification unread' })
   @ApiResponse({ status: 404, description: 'Notification not found' })
-  async unread(@Param('notificationId') notificationId: string) {
-    await this.unreadNotification.execute({ notificationId: notificationId });
+  async unread(@Param('id') id: string) {
+    await this.unreadNotification.execute({ notificationId: id });
   }
 
   @Post()
